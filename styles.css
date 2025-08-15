@@ -16,6 +16,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .header-container {
@@ -24,6 +25,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -59,6 +61,8 @@ header {
     gap: 5px;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .lang-btn:hover {
@@ -79,6 +83,7 @@ header {
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-right: 20px;
 }
 
 .download-btn:hover {
@@ -133,6 +138,8 @@ header {
     height: 30px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 .menu-icon:hover {
@@ -661,9 +668,13 @@ header {
     .hero-text, .hero-image, .block-text, .white-block img, .text-block, .image-block, .feature, .building-trust .content, .building-trust img {
         max-width: 100%;
     }
-    
-    .btn-white{
-        margin-top: 15px;
+
+    header {
+        padding: 8px 10px;
+    }
+
+    .header-container {
+        padding: 0;
     }
 
     .hero-text h1 {
@@ -738,6 +749,15 @@ header {
     .dapps-section .btn-outline {
         padding: 8px 15px;
         font-size: 0.85em;
+        margin-bottom: 25px;
+    }
+
+    .btn-white, .btn-full {
+        margin-bottom: 25px;
+    }
+
+    .building-trust img, .white-block img, .one-stop-section .image-block img {
+        margin-top: 20px;
     }
 
     .one-stop-section .image-block {
@@ -777,6 +797,14 @@ header {
 
     .hero-text, .hero-image, .block-text, .white-block img, .text-block, .image-block, .feature, .building-trust .content, .building-trust img {
         max-width: 100%;
+    }
+
+    header {
+        padding: 5px 8px;
+    }
+
+    .header-container {
+        padding: 0;
     }
 
     .hero-text h1 {
@@ -863,6 +891,15 @@ header {
     .dapps-section .btn-outline {
         padding: 6px 12px;
         font-size: 0.75em;
+        margin-bottom: 20px;
+    }
+
+    .btn-white, .btn-full {
+        margin-bottom: 20px;
+    }
+
+    .building-trust img, .white-block img, .one-stop-section .image-block img {
+        margin-top: 15px;
     }
 
     .one-stop-section .image-block {
@@ -902,12 +939,26 @@ header {
     }
 
     .menu-icon {
-        margin-top: 10px;
         height: 25px;
     }
 
     .subpage-content h1 {
         font-size: 1.8em;
+    }
+
+    .nav-links {
+        margin-top: 60px;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 5;
+        width: 30%;
+        background: white;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        animation: slideDown 0.5s ease-out;
+        box-sizing: border-box;
     }
 }
 
@@ -915,7 +966,7 @@ header {
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 0;
         width: 100%;
         background: white;
@@ -923,6 +974,7 @@ header {
         padding: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         animation: slideDown 0.5s ease-out;
+        box-sizing: border-box;
     }
 
     .nav-links a, .nav-links button {
@@ -931,6 +983,7 @@ header {
         transition: background 0.3s ease;
         width: 100%;
         text-align: left;
+        box-sizing: border-box;
     }
 
     .nav-links a:hover, .nav-links button:hover {
