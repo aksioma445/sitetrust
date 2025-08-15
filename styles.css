@@ -864,6 +864,8 @@ header {
     .image-gallery {
         flex-direction: column;
         align-items: center;
+        margin-top: 90px;
+        margin-bottom: 40px;
     }
 
     .gallery-image {
@@ -885,7 +887,8 @@ header {
     }
 
     .download-block {
-        margin-top: 50px;
+        margin-top: 90px;
+        width: 80%;
     }
 
     .dapps-section .btn-outline {
