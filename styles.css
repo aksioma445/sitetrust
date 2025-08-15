@@ -1,0 +1,979 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #000;
+    overflow-x: hidden;
+}
+
+header {
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 60px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.language-selector {
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    background: none;
+    border: 2px solid #0500ff;
+    border-radius: 9999px;
+    padding: 5px 15px;
+    color: #0500ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: #0500ff;
+    color: white;
+}
+
+.globe-icon {
+    height: 25px;
+}
+
+.download-btn {
+    background: #0500ff;
+    color: white;
+    border-radius: 9999px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #0033cc;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.lang-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.lang-dropdown a:hover {
+    color: #0500ff;
+}
+
+.lang-dropdown img {
+    height: 20px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #0500ff;
+}
+
+.menu-icon {
+    display: none;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.nav-links a, .nav-links button {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 100px auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-text {
+    max-width: 45%;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.1;
+    animation: slideInLeft 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.hero-image {
+    max-width: 50%;
+    animation: slideInRight 1s ease-out;
+}
+
+.badges-reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.badges {
+    display: flex;
+    gap: 40px;
+}
+
+.badges div {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.badge-text {
+    color: #000;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #0500ff;
+}
+
+.reviews {
+    text-align: center;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.reviews h3 {
+    font-size: 1.8em;
+    color: #000;
+}
+
+.stars {
+    margin-top: -25px;
+    color: #0500ff;
+    font-size: 1.8em;
+}
+
+.building-trust {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #0500ff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.building-trust .content {
+    max-width: 50%;
+}
+
+.building-trust h2 {
+    font-size: 2em;
+    font-weight: bold;
+    animation: slideInLeft 1s ease-out;
+}
+
+.building-trust p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.btn-white {
+    background: white;
+    color: #4a6eff;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background: #e0e0e0;
+    color: #0033cc;
+}
+
+.building-trust img {
+    max-width: 40%;
+    animation: slideInRight 1s ease-out;
+}
+
+.dapps-section {
+    background: linear-gradient(180deg, #ffecb7 0%, #ffaefe 100%);
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    border-radius: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.dapps-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.dapps-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0 40px;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.white-block {
+    max-width: 100%;
+    background: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+.block-text {
+    max-width: 45%;
+}
+
+.block-text h3 {
+    font-size: 2em;
+    font-weight: bold;
+    animation: slideInLeft 1s ease-out;
+}
+
+.block-text p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.btn-outline {
+    border: 2px solid #0500ff;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    color: #0500ff;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #0500ff;
+    color: white;
+}
+
+.white-block img {
+    max-width: 50%;
+    animation: slideInRight 1s ease-out;
+}
+
+.zero-tracking-section {
+    background: linear-gradient(180deg, #f5f568 0%, #48ff91 100%);
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    border-radius: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.zero-tracking-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.zero-tracking-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0 40px;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.zero-tracking-section .white-block img {
+    max-width: 45%;
+    order: 2;
+    animation: slideInRight 1s ease-out;
+}
+
+.zero-tracking-section .block-text {
+    order: 1;
+}
+
+.btn-full {
+    background: #0500ff;
+    color: white;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 35px;
+}
+
+.btn-full:hover {
+    background: #0033cc;
+}
+
+.security-features {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 30%;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.feature img {
+    height: 100px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+    transform: scale(1.1);
+}
+
+.feature p {
+    font-size: 1em;
+    color: #333;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.learn-btn {
+    display: block;
+    margin: 40px auto 0;
+    border: 2px solid #28a745;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.learn-btn:hover {
+    background: #28a745;
+    color: white;
+}
+
+.one-stop-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.text-block {
+    background: #f4f4f7;
+    padding: 40px;
+    max-width: 40%;
+    border-radius: 20px;
+}
+
+.text-block h2 {
+    font-size: 2em;
+    font-weight: bold;
+    animation: slideInLeft 1s ease-out;
+}
+
+.text-block p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.toggle {
+    border: 2px solid #ccc;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    background: white;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle:hover {
+    background: #e0e0e0;
+}
+
+.toggle.active {
+    background: #0500ff;
+    color: white;
+    border-color: #0500ff;
+}
+
+.image-block {
+    background: black;
+    padding: 20px;
+    max-width: 50%;
+    border-radius: 20px;
+    margin-left: 20px;
+    animation: slideInRight 1s ease-out;
+}
+
+.gif {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gif:hover {
+    transform: scale(1.05);
+}
+
+.footer-section {
+    background: #f4f4f7;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+    border-radius: 20px;
+}
+
+.footer-logo {
+    height: 60px;
+    animation: fadeIn 1s ease-out;
+}
+
+.download-section {
+    text-align: center;
+}
+
+.download-section h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.download-section p {
+    font-size: 1em;
+    color: #333;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    background: #0500ff;
+    color: white;
+    border-radius: 9999px;
+    padding: 12px 23px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #0033cc;
+}
+
+.download-btn img {
+    height: 20px;
+}
+
+.stay-connected {
+    text-align: right;
+}
+
+.stay-connected h3 {
+    font-size: 1em;
+    color: #000;
+    animation: fadeIn 1s ease-out;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials img {
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+.download-block {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #0500ff;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.download-block h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.download-block p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+/* Media Queries */
+
+/* 401px - 700px */
+@media (min-width: 401px) and (max-width: 700px) {
+    .hero, .building-trust, .white-block, .one-stop-section, .security-features, .footer-section, .download-block {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .hero-text, .hero-image, .block-text, .white-block img, .text-block, .image-block, .feature, .building-trust .content, .building-trust img {
+        max-width: 100%;
+    }
+    
+    .btn-white{
+        margin-top: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 0.95em;
+    }
+
+    .badges {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .badges div {
+        font-size: 1.4em;
+    }
+
+    .building-trust h2, .dapps-section h2, .zero-tracking-section h2, .text-block h2, .download-block h2 {
+        font-size: 1.7em;
+    }
+
+    .building-trust p, .dapps-section p, .zero-tracking-section p, .text-block p, .download-block p {
+        font-size: 0.95em;
+    }
+
+    .building-trust img {
+        margin-top: 20px;
+    }
+
+    .feature {
+        max-width: 80%;
+    }
+
+    .feature h4 {
+        font-size: 1.2em;
+    }
+
+    .feature p {
+        font-size: 0.85em;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-image {
+        max-width: 80%;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .download-btn {
+        padding: 8px 18px;
+        font-size: 0.85em;
+    }
+
+    .download-btn img {
+        height: 16px;
+    }
+
+    .download-block {
+        margin-top: 50px;
+    }
+
+    .dapps-section .btn-outline {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+
+    .one-stop-section .image-block {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .footer-logo {
+        height: 50px;
+    }
+
+    .download-section h2 {
+        font-size: 1.3em;
+    }
+
+    .download-section p {
+        font-size: 0.9em;
+    }
+
+    .stay-connected {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .socials img {
+        height: 25px;
+    }
+}
+
+/* 0px - 400px */
+@media (max-width: 400px) {
+    .hero, .building-trust, .white-block, .one-stop-section, .security-features, .footer-section, .download-block {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .hero-text, .hero-image, .block-text, .white-block img, .text-block, .image-block, .feature, .building-trust .content, .building-trust img {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 1.6em;
+    }
+
+    .hero-text p {
+        font-size: 0.85em;
+    }
+
+    .badges {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .badges div {
+        font-size: 1.1em;
+    }
+
+    .reviews h3 {
+        font-size: 1.4em;
+    }
+
+    .stars {
+        font-size: 1.4em;
+    }
+
+    .building-trust h2, .dapps-section h2, .zero-tracking-section h2, .text-block h2, .download-block h2 {
+        font-size: 1.4em;
+    }
+
+    .building-trust p, .dapps-section p, .zero-tracking-section p, .text-block p, .download-block p {
+        font-size: 0.85em;
+    }
+
+    .building-trust img {
+        margin-top: 15px;
+    }
+
+    .feature {
+        max-width: 90%;
+    }
+
+    .feature h4 {
+        font-size: 1.1em;
+    }
+
+    .feature p {
+        font-size: 0.8em;
+    }
+
+    .feature img {
+        height: 70px;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-image {
+        max-width: 90%;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .download-btn {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+
+    .download-btn img {
+        height: 14px;
+    }
+
+    .download-block {
+        margin-top: 50px;
+    }
+
+    .dapps-section .btn-outline {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+
+    .one-stop-section .image-block {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .footer-logo {
+        height: 40px;
+    }
+
+    .download-section h2 {
+        font-size: 1.1em;
+    }
+
+    .download-section p {
+        font-size: 0.8em;
+    }
+
+    .stay-connected {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .socials img {
+        height: 20px;
+    }
+
+    .lang-btn {
+        padding: 3px 8px;
+        font-size: 0.75em;
+        margin-bottom: 10px;
+    }
+
+    .globe-icon {
+        height: 18px;
+    }
+
+    .menu-icon {
+        margin-top: 10px;
+        height: 25px;
+    }
+
+    .subpage-content h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        animation: slideDown 0.5s ease-out;
+    }
+
+    .nav-links a, .nav-links button {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        transition: background 0.3s ease;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links a:hover, .nav-links button:hover {
+        background: #f0f0f0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .language-selector {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
